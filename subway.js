@@ -1,4 +1,3 @@
-var subway =
 {
   "meta" : {
     "view" : {
