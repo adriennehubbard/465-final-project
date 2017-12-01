@@ -1,0 +1,29 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+</head>
+
+<body>
+	<div id="map" style="width: 800px; height: 600px; margin: auto; border: 1px solid #AAA"></div>
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script>
+var subway = $.ajax({
+ url:<subway.geojson>,
+ dataType: "json",
+ success: console.log("Data successfully loaded!"),
+ error: function (xhr) {
+    alert(xhr.statusText)
+ }
+})
+
+	var map=L.map('map')
+		.setView([40.734611, -73.937398], 11.5)
+
+	var basemap=L.tileLayer("https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png").addTo(map);
+
+</script>
+</body>
+</html>
